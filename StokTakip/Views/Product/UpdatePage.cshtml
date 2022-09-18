@@ -1,0 +1,139 @@
+﻿@model StokTakip.Model.Product
+@{
+    ViewBag.Title = "UpdatePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form action="/Product/UpdateProduct/" method="post">
+        
+        @Html.HiddenFor(p => p.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(p => p.Name)
+            @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.Description)
+            @Html.TextBoxFor(p => p.Description, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.Price)
+            @Html.TextBoxFor(p => p.Price, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.Stock)
+            @Html.TextBoxFor(p => p.Stock, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.CategoryId)
+            @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new
+                {
+                    @class = "form-control"
+           })
+        </div>
+        
+        <br />
+
+        <div><button class="btn btn-primary">GÜNCELLE</button></div>
+
+    </form>
+</div>
+
+
+
+
+@*<form action="/Product/UpdateProduct/">
+    <div class="form-group">
+        @Html.LabelFor(p => p.Name)
+        @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+
+        @Html.LabelFor(p => p.Description)
+        @Html.TextBoxFor(p => p.Description, new { @class = "form-control" })
+
+        @Html.LabelFor(p => p.Price)
+        @Html.TextBoxFor(p => p.Price, new { @class = "form-control" })
+
+        @Html.LabelFor(p => p.Stock)
+        @Html.TextBoxFor(p => p.Stock, new { @class = "form-control" })
+
+        @Html.LabelFor(p => p.CategoryId)
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new
+            {
+                @class = "form-control"
+       })
+
+        <br />
+    </div>
+    <div>
+        <a class="btn btn-primary" href="/Product/Index/">GÜNCELLE</a>
+    </div>
+</form>*@
+
+
+
+
+
+@*<form method="post" action="/Product/UpdateProduct/">
+        <div class="form-group">
+            <label>Ürün</label>
+            <input type="text" name="Name" class="form-control" value="@Model.Name" />
+        </div>
+        <div class="form-group">
+            <label>Açıklama</label>
+            <input type="text" name="Description" class="form-control" value="@Model.Description" />
+        </div>
+        <div class="form-group">
+            <label>Fiyat</label>
+            <input type="text" name="Price" class="form-control" value="@Model.Price" />
+        </div>
+        <div class="form-group">
+            <label>Stok</label>
+            <input type="text" name="Stock" class="form-control" value="@Model.Stock" />
+        </div>
+        <div class="form-group">
+            <label>Kategori</label>
+            @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new
+            {
+                @class = "form-control"
+       })
+        </div>
+        <br />
+        <a class="btn btn-primary" href="/Product/Index/">GÜNCELLE</a>
+        <button class="btn btn-primary">GÜNCELLE</button>
+    </form>*@
+
+
+
+
+@*<form method="post">
+        <div class="form-group">
+            <label>Ürün</label>
+            <input type="text" name="Name" class="form-control" value="@Model.Name" />
+        </div>
+        <div class="form-group">
+            <label>Açıklama</label>
+            <input type="text" name="Description" class="form-control" value="@Model.Description" />
+        </div>
+        <div class="form-group">
+            <label>Fiyat</label>
+            <input type="text" name="Price" class="form-control" value="@Model.Price" />
+        </div>
+        <div class="form-group">
+            <label>Stok</label>
+            <input type="text" name="Stock" class="form-control" value="@Model.Stock" />
+        </div>
+        <div class="form-group">
+            <label>Kategori</label>
+            @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new
+            {
+                @class = "form-control"
+       })
+        </div>
+    </form>
+
+    <br />
+    <a class="btn btn-primary" href="/Product/Index/">GÜNCELLE</a>
+    <button class="btn btn-primary">GÜNCELLE</button>*@
+
+

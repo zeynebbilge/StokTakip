@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                <input type="email" class="form-control" name="Mail" id="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Şifre:</label>
+                <input type="password" class="form-control" name="Password" id="exampleInputPassword1">
+            </div>
+            <div >
+                <span class="pull-right"><a href="/Account/PasswordReset">Şifreni mi Unuttun?</a></span>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Giriş</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

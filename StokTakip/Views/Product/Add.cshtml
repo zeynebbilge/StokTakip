@@ -1,0 +1,32 @@
+﻿@model StokTakip.Model.Product
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+
+    <label>Ürün</label>
+    <input type="text" name="Name" class="form-control" required />
+
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" required />
+
+    <label>Fiyat</label>
+    <input type="text" name="Price" class="form-control" required />
+
+    <label>Stok</label>
+    <input type="text" name="Stock" class="form-control" required />
+
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new
+    {
+        @class = "form-control"
+    })
+
+    <br />
+    @*<a class="btn btn-primary" href="/Product/Index/">EKLE</a>*@ 
+    <button class="btn btn-primary">EKLE</button>
+
+</form>

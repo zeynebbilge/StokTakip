@@ -1,0 +1,35 @@
+﻿@using StokTakip.Model
+@model List<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<a href="/Product/Add/" class="btn btn-primary">Yeni Ürün</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün</th>
+        <th>Açıklama</th>
+        <th>Fiyat</th>
+        <th>Stok</th>
+        <th>Kategori</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+            <td>@item.Stock</td>
+            <td>@item.CategoryId</td>
+            <td><a href="/Product/UpdatePage/@item.Id" class="btn btn-warning">Düzenle</a></td>
+            <td>@Html.ActionLink("Sil", "Delete",new {id=item.Id}, new { @class="btn btn-danger", onclick = "return confirm('Silmek istediğinize emin misiniz?')" })</td>
+        </tr>
+    }
+</table>
+
